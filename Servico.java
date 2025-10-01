@@ -1,4 +1,4 @@
 package projeto;
 
-public class Servico {
+public abstract class Servico {
 }
