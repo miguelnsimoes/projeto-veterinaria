@@ -5,7 +5,8 @@ public abstract class Pessoa {
     protected int cpf;
 
     public Pessoa(){
-
+        nome = "";
+        cpf = 0;
     }
 
     public Pessoa(String nome, int cpf){
@@ -30,9 +31,9 @@ public abstract class Pessoa {
         this.cpf = cpf;
     }
 
-    @Override
-    public String impDados(){
-        System.out.println("Nome: " + nome + "CPF: " + cpf);
+
+    public String impDados() {
+        return "Nome: " + nome + " | CPF: " + cpf;
     }
 
 
