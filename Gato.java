@@ -3,6 +3,8 @@ package projeto;
 public class Gato extends Animal {
     private String cor;
 
+
+
     public Gato(){
         super();
     }
@@ -22,6 +24,7 @@ public class Gato extends Animal {
 
     @Override
     public String emitirSom(){
-        System.out.println("miau");
+        return "Miau";
     }
+
 }

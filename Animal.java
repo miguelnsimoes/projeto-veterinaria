@@ -6,7 +6,9 @@ public abstract class Animal {
     protected String raca;
 
     public Animal(){
-
+        nome = "";
+        idade = 0;
+        raca = "";
     }
 
     public Animal(String nome, int idade, String raca){

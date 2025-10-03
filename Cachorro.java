@@ -22,6 +22,8 @@ public class Cachorro extends Animal{
 
     @Override
     public String emitirSom(){
-        System.out.println("au au");
+        return "Au au";
+    }
+
     }
 }
