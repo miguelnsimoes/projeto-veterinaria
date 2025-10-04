@@ -1,15 +1,15 @@
-package projeto;
-
 public class Veterinario extends Pessoa{
     private String crmv;
     private double salario;
 
     public Veterinario(){
         super();
+        crmv = "";
+        salario = 0.0;
     }
 
-    public Veterinario(String nome, int cpf, String crmv, double salario){
-        super(nome,cpf);
+    public Veterinario(String nome, String cpf, String crmv, double salario){
+        super(nome, cpf);
         this.crmv = crmv;
         this.salario = salario;
     }
@@ -31,8 +31,9 @@ public class Veterinario extends Pessoa{
     }
 
     @Override
-    public String impDados(){
-        System.out.println(super.impDados() + " | CRMV: " + crmv + " | Salário: " + salario;);
+    public void impDados(){
+        super.impDados();
+        System.out.println("CRMV: " + crmv + " | Salário: " + salario);
     }
 
 

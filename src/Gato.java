@@ -1,16 +1,13 @@
-package projeto;
-
 public class Gato extends Animal {
     private String cor;
 
-
-
     public Gato(){
         super();
+        this.cor = "";
     }
 
-    public Gato(String nome, int idade, String raca, String cor){
-        super(nome, idade, raca);
+    public Gato(String nome, int idade, String raca, Cliente cliente, String cor){
+        super(nome, idade, raca, cliente);
         this.cor = cor;
     }
 
