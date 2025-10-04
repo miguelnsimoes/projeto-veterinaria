@@ -5,16 +5,19 @@ public abstract class Animal {
     protected int idade;
     protected String raca;
 
+    private Cliente dono;
+
     public Animal(){
         nome = "";
         idade = 0;
         raca = "";
     }
 
-    public Animal(String nome, int idade, String raca){
+    public Animal(String nome, int idade, String raca, Cliente dono){
         this.nome = nome;
         this.idade = idade;
         this.raca = raca;
+        this.dono = dono;
     }
 
     public String getNome(){
