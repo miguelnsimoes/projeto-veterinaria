@@ -4,11 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b1008a2-5a82-49f4-bfdc-b480b3339915" name="Changes" comment="" />
+    <list default="true" id="7b1008a2-5a82-49f4-bfdc-b480b3339915" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Cachorro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Consulta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Gato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pessoa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TstClinica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Veterinario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projeto/Animal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projeto/Cachorro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projeto/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projeto/Consulta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projeto/Gato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projeto/Pessoa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projeto/Servico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projeto/TstClinica.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projeto/Veterinario.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -20,9 +43,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.TstClinica.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/miguel/Área de trabalho/poo utfpr",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -31,6 +57,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="projeto" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -48,11 +79,35 @@
       <updated>1759324654468</updated>
       <workItem from="1759324656714" duration="80000" />
       <workItem from="1759324811818" duration="38000" />
-      <workItem from="1759325106886" duration="957000" />
+      <workItem from="1759325106886" duration="3244000" />
+      <workItem from="1759329464818" duration="11000" />
+      <workItem from="1759409833739" duration="2535000" />
+      <workItem from="1759444591682" duration="544000" />
+      <workItem from="1759447620805" duration="1154000" />
+      <workItem from="1759493429478" duration="947000" />
+      <workItem from="1759494385046" duration="257000" />
+      <workItem from="1759495832849" duration="70000" />
+      <workItem from="1759499013511" duration="1443000" />
+      <workItem from="1759530922173" duration="26000" />
+      <workItem from="1759537599778" duration="1595000" />
+      <workItem from="1759539491222" duration="702000" />
+      <workItem from="1759597620518" duration="1510000" />
+      <workItem from="1759599411141" duration="5617000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
