@@ -4,33 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b1008a2-5a82-49f4-bfdc-b480b3339915" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Cachorro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Consulta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Gato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pessoa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TstClinica.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Veterinario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projeto/Animal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projeto/Cachorro.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projeto/Cliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projeto/Consulta.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projeto/Gato.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projeto/Pessoa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projeto/Servico.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projeto/TstClinica.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projeto/Veterinario.java" beforeDir="false" />
-    </list>
+    <list default="true" id="7b1008a2-5a82-49f4-bfdc-b480b3339915" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectColorInfo">{
@@ -46,7 +27,7 @@
     "Application.TstClinica.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/miguel/Área de trabalho/poo utfpr",
     "node.js.detected.package.eslint": "true",
@@ -92,7 +73,7 @@
       <workItem from="1759537599778" duration="1595000" />
       <workItem from="1759539491222" duration="702000" />
       <workItem from="1759597620518" duration="1510000" />
-      <workItem from="1759599411141" duration="5617000" />
+      <workItem from="1759599411141" duration="6087000" />
     </task>
     <servers />
   </component>
