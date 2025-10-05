@@ -1,28 +1,15 @@
-public class Cliente extends Pessoa{
+public class Cliente extends Pessoa {
     private String endereco;
     private String telefone;
 
     private Animal animal;
 
     public Cliente(){
-        super("", "");
-        endereco = "";
-        telefone = "";
+        super();
+        this.endereco = "";
+        this.telefone = "";
         this.animal = null;
     }
-
-    public Cliente(String nome, String cpf, String endereco, String telefone, Animal animal){
-        super(nome, cpf);
-        this.endereco = endereco;
-        this.telefone = telefone;
-        this.animal = animal;
-
-        if(this.animal != null && this.animal.getCliente() != this){
-            this.animal.setCliente(this);
-        }
-    }
-
-
 
     public String getEndereco(){
         return endereco;
@@ -51,7 +38,6 @@ public class Cliente extends Pessoa{
 
         this.animal = animal;
 
-        // Define a nova referência e garante a bidirecionalidade
         if(animal != null && animal.getCliente() != this){
             animal.setCliente(this);
         }
@@ -59,15 +45,11 @@ public class Cliente extends Pessoa{
 
 
     @Override
-    public void impDados() {
+    public String impDados() {
         super.impDados();
-
         String animalInfo = (animal != null)
-                ? animal.getNome() + " (" + animal.getRaca() + ")"
+                ? animal.getNome() + " (" + animal.getRaca() + ", " + animal.emitirSom() + ")"
                 : "Nenhum";
-
-        System.out.println("Endereço: " + endereco + " | Telefone: " + telefone + " | Animal: " + animalInfo);
-
+        return super.impDados() + " | Endereço: " + endereco + " | Telefone: " + telefone + " | Animal: " + animalInfo;
     }
-
 }

@@ -1,22 +1,16 @@
 public abstract class Animal {
-    protected String nome;
-    protected int idade;
-    protected String raca;
+    private String nome;
+    private int idade;
+    private String raca;
 
-    private Cliente cliente;
+    private Cliente cliente; // Cliente é o dono
+
 
     public Animal(){
-        nome = "";
-        idade = 0;
-        raca = "";
-        cliente = null;
-    }
-
-    public Animal(String nome, int idade, String raca,  Cliente cliente){
-        this.nome = nome;
-        this.idade = idade;
-        this.raca = raca;
-        this.cliente = cliente;
+        this.nome = "";
+        this.idade = 0;
+        this.raca = "";
+        this.cliente = null;
     }
 
     public String getNome(){
@@ -47,15 +41,12 @@ public abstract class Animal {
         return cliente;
     }
 
-    public void setCliente(Cliente dono){
+    public void setCliente(Cliente cliente){
         this.cliente = cliente;
-
-        if(cliente != null && cliente.getAnimal() !=this){
+        if (cliente != null && cliente.getAnimal() != this) {
             cliente.setAnimal(this);
         }
     }
 
     public abstract String emitirSom();
-
-
 }

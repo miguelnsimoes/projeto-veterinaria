@@ -1,17 +1,11 @@
-public abstract class Pessoa {
-    protected String nome;
-    protected String cpf;
+public abstract class Pessoa implements Registravel {
+    private String nome;
+    private String cpf;
 
     public Pessoa(){
-        nome = "";
-        cpf = "";
+        this.nome = "";
+        this.cpf = "";
     }
-
-    public Pessoa(String nome, String cpf){
-        this.nome = nome;
-        this.cpf = cpf;
-    }
-
 
     public String getNome(){
         return nome;
@@ -21,18 +15,24 @@ public abstract class Pessoa {
         return cpf;
     }
 
-    public void setNome(String nome){
+    public void setNome(String nome) throws NomeInvalidoException {
+        if (nome == null || nome.trim().isEmpty()) {
+            throw new NomeInvalidoException("O nome não pode ser vazio.");
+        }
         this.nome = nome;
     }
 
-    public void setCpf(String cpf){
+    public void setCpf(String cpf) throws CpfInvalidoException {
+
+        if (cpf == null || cpf.length() != 11) {
+            throw new CpfInvalidoException("O cpf deve ter 11 dígitos numéricos.");
+        }
         this.cpf = cpf;
     }
 
 
-    public void impDados() {
-        System.out.println("Nome: " + nome + " | CPF: " + cpf);
+    @Override
+    public String impDados() {
+        return "Nome: " + nome + " | CPF: " + cpf;
     }
-
-
 }

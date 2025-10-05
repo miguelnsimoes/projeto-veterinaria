@@ -1,21 +1,16 @@
-public class Veterinario extends Pessoa{
+public class Veterinario extends Pessoa implements PodeConsultar {
     private String crmv;
     private double salario;
 
+
     public Veterinario(){
         super();
-        crmv = "";
-        salario = 0.0;
-    }
-
-    public Veterinario(String nome, String cpf, String crmv, double salario){
-        super(nome, cpf);
-        this.crmv = crmv;
-        this.salario = salario;
+        this.crmv = "";
+        this.salario = 0.0;
     }
 
     public String getCrmv(){
-        return  crmv;
+        return crmv;
     }
 
     public double getSalario(){
@@ -30,11 +25,15 @@ public class Veterinario extends Pessoa{
         this.salario = salario;
     }
 
+
     @Override
-    public void impDados(){
-        super.impDados();
-        System.out.println("CRMV: " + crmv + " | Salário: " + salario);
+    public String impDados(){
+        return super.impDados() + " | CRMV: " + crmv + " | Salário: R$" + (salario);
     }
 
 
+    @Override
+    public void realizarConsulta(Consulta consulta) {
+
+    }
 }
