@@ -65,7 +65,6 @@ public class TstClinica {
         cliente.impDados();
         System.out.println(animal.emitirSom());
 
-        System.out.println("\n--- Preparação da Consulta ---");
         System.out.print("Sintomas do Animal: ");
         String obs = scanner.nextLine();
 

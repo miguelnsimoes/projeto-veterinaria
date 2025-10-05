@@ -60,12 +60,16 @@ public class Cliente extends Pessoa{
     @Override
     public void impDados() {
         super.impDados();
-        String animalInfo = (animal != null)
-                ? animal.getNome() + " (" + animal.getRaca() + ")"
-                : "Nenhum";
+
+        String animalInfo;
+        if (animal != null) {
+            animalInfo = animal.getNome() + " (" + animal.getRaca() + ")";
+        } else {
+            animalInfo = "nenhum";
+        }
 
         System.out.println("Endereço: " + endereco + " | Telefone: " + telefone + " | Animal: " + animalInfo);
-
     }
+
 
 }
