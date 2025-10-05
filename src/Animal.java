@@ -47,7 +47,7 @@ public abstract class Animal {
         return cliente;
     }
 
-    public void setCliente(Cliente dono){
+    public void setCliente(Cliente cliente){
         this.cliente = cliente;
 
         if(cliente != null && cliente.getAnimal() !=this){

@@ -3,7 +3,7 @@ public class Gato extends Animal {
 
     public Gato(){
         super();
-        this.cor = "";
+        cor = "";
     }
 
     public Gato(String nome, int idade, String raca, Cliente cliente, String cor){

@@ -51,7 +51,6 @@ public class Cliente extends Pessoa{
 
         this.animal = animal;
 
-        // Define a nova referência e garante a bidirecionalidade
         if(animal != null && animal.getCliente() != this){
             animal.setCliente(this);
         }
@@ -61,7 +60,6 @@ public class Cliente extends Pessoa{
     @Override
     public void impDados() {
         super.impDados();
-
         String animalInfo = (animal != null)
                 ? animal.getNome() + " (" + animal.getRaca() + ")"
                 : "Nenhum";

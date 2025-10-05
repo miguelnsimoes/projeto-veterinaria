@@ -1,4 +1,4 @@
-public abstract class Pessoa {
+public abstract class Pessoa implements Registravel {
     protected String nome;
     protected String cpf;
 
@@ -29,7 +29,7 @@ public abstract class Pessoa {
         this.cpf = cpf;
     }
 
-
+    @Override
     public void impDados() {
         System.out.println("Nome: " + nome + " | CPF: " + cpf);
     }

@@ -7,7 +7,9 @@ public class TstClinica {
 
         System.out.println("--- Cadastro do Veterinário ---");
         Veterinario vet = new Veterinario("Dr. Miguel", "111.222.333-44", "CRMV-PR 55555", 6000.00);
-        vet.impDados();
+
+        Registravel registroVet = vet;
+        registroVet.impDados();
 
         System.out.println("\n--- Cadastro do Cliente ---");
         System.out.print("Nome do Cliente: ");
@@ -63,18 +65,16 @@ public class TstClinica {
         cliente.impDados();
         System.out.println(animal.emitirSom());
 
-        System.out.println("\n--- Enter para Agendar a Consulta ---");
-        scanner.nextLine();
+        System.out.println("\n--- Preparação da Consulta ---");
         System.out.print("Sintomas do Animal: ");
         String obs = scanner.nextLine();
 
         Consulta consulta = new Consulta(new Date(), obs, vet, animal);
 
         System.out.println("\n--- Resumo da Consulta ---");
-        System.out.println("Data: " + consulta.getData());
-        System.out.println("Veterinário: " + consulta.getVeterinario().getNome());
-        System.out.println("Animal: " + consulta.getAnimal().getNome());
-        System.out.println("Observações: " + consulta.getObservacoes());
+
+        PodeConsultar consultor = vet;
+        consultor.realizarConsulta(consulta);
 
         scanner.close();
     }
