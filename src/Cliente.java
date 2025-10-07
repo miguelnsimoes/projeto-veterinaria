@@ -5,23 +5,11 @@ public class Cliente extends Pessoa{
     private Animal animal;
 
     public Cliente(){
-        super("", "");
+        super();
         endereco = "";
         telefone = "";
         this.animal = null;
     }
-
-    public Cliente(String nome, String cpf, String endereco, String telefone, Animal animal){
-        super(nome, cpf);
-        this.endereco = endereco;
-        this.telefone = telefone;
-        this.animal = animal;
-
-        if(this.animal != null && this.animal.getCliente() != this){
-            this.animal.setCliente(this);
-        }
-    }
-
 
 
     public String getEndereco(){

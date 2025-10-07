@@ -6,10 +6,6 @@ public class Cachorro extends Animal{
         this.porte = "";
     }
 
-    public Cachorro(String nome, int idade, String raca, Cliente cliente, String porte){
-        super(nome, idade, raca, cliente);
-        this.porte = porte;
-    }
 
     public String getPorte(){
         return porte;

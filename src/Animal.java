@@ -12,12 +12,6 @@ public abstract class Animal {
         cliente = null;
     }
 
-    public Animal(String nome, int idade, String raca,  Cliente cliente){
-        this.nome = nome;
-        this.idade = idade;
-        this.raca = raca;
-        this.cliente = cliente;
-    }
 
     public String getNome(){
         return nome;

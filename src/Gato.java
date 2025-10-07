@@ -6,10 +6,6 @@ public class Gato extends Animal {
         cor = "";
     }
 
-    public Gato(String nome, int idade, String raca, Cliente cliente, String cor){
-        super(nome, idade, raca, cliente);
-        this.cor = cor;
-    }
 
     public String getCor(){
         return cor;

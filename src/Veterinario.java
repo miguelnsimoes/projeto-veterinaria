@@ -8,12 +8,6 @@ public class Veterinario extends Pessoa implements PodeConsultar{
         salario = 0.0;
     }
 
-    public Veterinario(String nome, String cpf, String crmv, double salario){
-        super(nome, cpf);
-        this.crmv = crmv;
-        this.salario = salario;
-    }
-
     public String getCrmv(){
         return  crmv;
     }

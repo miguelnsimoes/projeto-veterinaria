@@ -6,28 +6,39 @@ public class TstClinica {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("--- Cadastro do Veterinário ---");
-        Veterinario vet = new Veterinario("Dr. Miguel", "111.222.333-44", "CRMV-PR 55555", 6000.00);
+        Veterinario vet = new Veterinario();
+
+        vet.setNome("Dr. Miguel");
+        vet.setCpf("111.222.333-44");
+        vet.setCrmv("CRMV-PR 55555");
+        vet.setSalario(6000.00);
 
         Registravel registroVet = vet;
         registroVet.impDados();
 
         System.out.println("\n--- Cadastro do Cliente ---");
+
+        Cliente cliente = new Cliente();
+
         System.out.print("Nome do Cliente: ");
         String nomeCliente = scanner.nextLine();
+        cliente.setNome(nomeCliente);
 
         System.out.print("CPF do Cliente: ");
         String cpfCliente = scanner.nextLine();
+        cliente.setCpf(cpfCliente);
 
         System.out.print("Endereço: ");
         String enderecoCliente = scanner.nextLine();
+        cliente.setEndereco(enderecoCliente);
 
         System.out.print("Telefone: ");
         String telefoneCliente = scanner.nextLine();
+        cliente.setTelefone(telefoneCliente);
 
-
-        Cliente cliente = new Cliente(nomeCliente, cpfCliente, enderecoCliente, telefoneCliente, null);
 
         System.out.println("\n--- Cadastro do Animal ---");
+
         System.out.print("Nome do Animal: ");
         String nomeAnimal = scanner.nextLine();
 
@@ -47,17 +58,29 @@ public class TstClinica {
             System.out.print("Porte do Cachorro: ");
             String porte = scanner.nextLine();
 
-            animal = new Cachorro(nomeAnimal, idadeAnimal, racaAnimal, cliente, porte);
+            Cachorro cachorro = new Cachorro();
+            cachorro.setNome(nomeAnimal);
+            cachorro.setIdade(idadeAnimal);
+            cachorro.setRaca(racaAnimal);
+            cachorro.setPorte(porte);
+
+            animal = cachorro;
         } else if (tipo == 2) {
             System.out.print("Cor do Gato: ");
             String cor = scanner.nextLine();
 
-            animal = new Gato(nomeAnimal, idadeAnimal, racaAnimal, cliente, cor);
+            Gato gato = new Gato();
+            gato.setNome(nomeAnimal);
+            gato.setIdade(idadeAnimal);
+            gato.setRaca(racaAnimal);
+            gato.setCor(cor);
+
+            animal = gato;
         } else {
             System.out.println("Tipo invalido");
+            scanner.close();
             return;
         }
-
 
         cliente.setAnimal(animal);
 
@@ -68,7 +91,12 @@ public class TstClinica {
         System.out.print("Sintomas do Animal: ");
         String obs = scanner.nextLine();
 
-        Consulta consulta = new Consulta(new Date(), obs, vet, animal);
+        Consulta consulta = new Consulta();
+        consulta.setData(new Date());
+        consulta.setObservacoes(obs);
+        consulta.setVeterinario(vet);
+        consulta.setAnimal(animal);
+
 
         System.out.println("\n--- Resumo da Consulta ---");
 

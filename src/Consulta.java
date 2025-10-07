@@ -14,12 +14,6 @@ public class Consulta {
         animal = null;
     }
 
-    public Consulta(Date data, String observacoes, Veterinario veterinario, Animal animal) {
-        this.data = data;
-        this.observacoes = observacoes;
-        this.veterinario = veterinario;
-        this.animal = animal;
-    }
 
     public Date getData() {
         return data;
