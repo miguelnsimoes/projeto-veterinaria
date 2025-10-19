@@ -34,7 +34,7 @@ public class Consulta {
         this.observacoes = observacoes;
     }
 
-    //Sobrecarga
+    //sobrecarga
     public void setObservacoes(String sintomas, String diagnostico) {
         this.observacoes = "Sintomas: " + sintomas + "\nDiagnóstico: " + diagnostico;
     }
@@ -42,6 +42,7 @@ public class Consulta {
     public void setVeterinario(Veterinario veterinario) {
         this.veterinario = veterinario;
     }
+
     public void setAnimal(Animal animal) {
         this.animal = animal;
     }

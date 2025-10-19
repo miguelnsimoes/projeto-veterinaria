@@ -30,15 +30,15 @@ public class GerenciadorVeterinario {
         System.out.println("Nome: ");
         vet.setNome(scanner.nextLine());
 
-        System.out.println("CPF: (XXX.XXX.XXX-XX)");
+        System.out.println("CPF: ");
         vet.setCpf(scanner.nextLine());
 
         try{
             System.out.println("CRMV: ");
-            vet.setCrmv(scanner.nextLine()); // Lança CrmvVazioException
+            vet.setCrmv(scanner.nextLine()); // lança CrmvVazioException
 
             System.out.println("Salario: ");
-            vet.setSalario(Double.parseDouble((scanner.nextLine())));// Lança SalarioInvalidoException
+            vet.setSalario(Double.parseDouble((scanner.nextLine())));// lança SalarioInvalidoException
 
             veterinarios.add(vet);
             System.out.println("Veterinário cadastrado com sucesso!");
@@ -54,8 +54,8 @@ public class GerenciadorVeterinario {
         }
     }
 
-    public void listarVeterinario(){
-        System.out.println("---RELATORIO DE VETERINARIOS---");
+    public void listarVeterinarios(){
+        System.out.println("RELATORIO DE VETERINARIOS");
         if(veterinarios.isEmpty()){
             System.out.println("nenhum veterinario cadastrado");
             return;
@@ -79,7 +79,7 @@ public class GerenciadorVeterinario {
         }
         for (int i = 0; i < veterinarios.size(); i++) {
             Veterinario v = veterinarios.get(i);
-            System.out.println("[" + i + "] " + v.getNome()); //Reflexividade
+            System.out.println(i + v.getNome()); //Reflexividade
         }
     }
 

@@ -1,4 +1,4 @@
-public abstract class Pessoa implements Registravel {
+public abstract class Pessoa{
     protected String nome;
     protected String cpf;
 

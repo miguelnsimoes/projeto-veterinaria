@@ -11,7 +11,7 @@ public class GerenciadorCliente {
     }
 
     public void cadastrarCliente(){
-        System.out.println("CADASTRO DE CLIENTE!");
+        System.out.println("CADASTRO DE CLIENTE");
         Cliente cliente = new Cliente();
 
         System.out.println("Nome do Cliente: ");
@@ -26,7 +26,7 @@ public class GerenciadorCliente {
         System.out.println("Telefone:");
         cliente.setEndereco(scanner.nextLine());
 
-        System.out.println("CADASTRO DO ANIMAL DO CLIENTE");
+        System.out.println("CADASTRO DO ANIMAL");
         Animal animal = cadastrarAnimal();
 
         if(animal != null){
@@ -44,7 +44,7 @@ public class GerenciadorCliente {
         System.out.print("Nome do Animal: ");
         String nomeAnimal = scanner.nextLine();
 
-        System.out.print("Idade do Animal (int): ");
+        System.out.print("Idade do Animal: ");
         int idadeAnimal = (scanner.nextInt());
 
         System.out.print("Raça do Animal: ");
@@ -52,6 +52,8 @@ public class GerenciadorCliente {
 
         System.out.print("Tipo (1-Cachorro / 2-Gato / 3-Pássaro): ");
         int tipo = (scanner.nextInt());
+        scanner.nextLine();
+
 
         Animal animal = null;
 
@@ -68,7 +70,7 @@ public class GerenciadorCliente {
         }
         else if(tipo == 2){
             Gato g = new Gato();
-            g.setNome(nomeAnimal);]
+            g.setNome(nomeAnimal);
             g.setIdade((idadeAnimal));
             g.setRaca(racaAnimal);
 
@@ -94,7 +96,7 @@ public class GerenciadorCliente {
         return animal;
     }
 
-    public void listarCliente(){
+    public void listarClientes(){
         System.out.println("DADOS DO CLIENTE");
 
         if(clientes.isEmpty()){
@@ -120,7 +122,7 @@ public class GerenciadorCliente {
         }
     }
 
-    public void listarClienteVisual(){
+    public void listarClientesVisual(){
         for(int i = 0; i < clientes.size(); i++){
             Cliente c = clientes.get(i);
             System.out.println(i + c.getNome());
