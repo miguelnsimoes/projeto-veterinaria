@@ -30,14 +30,14 @@ public class GerenciadorVeterinario {
         System.out.println("Nome: ");
         vet.setNome(scanner.nextLine());
 
-        System.out.println("CPF: ");
+        System.out.println("CPF: (XXX.XXX.XXX-XX)");
         vet.setCpf(scanner.nextLine());
 
         try{
-            System.out.println("CRMV: (XXX.XXX.XXX-XX)");
+            System.out.println("CRMV: ");
             vet.setCrmv(scanner.nextLine()); // Lança CrmvVazioException
 
-            System.out.println("Salario: (double) ");
+            System.out.println("Salario: ");
             vet.setSalario(Double.parseDouble((scanner.nextLine())));// Lança SalarioInvalidoException
 
             veterinarios.add(vet);
@@ -46,10 +46,10 @@ public class GerenciadorVeterinario {
         catch (SalarioInvalidoException e){
             System.out.println("erro no cadastro " + e.getMessage());
         }
-        catch(CrmvVazioException e){
+        catch (CrmvVazioException e){
             System.out.println("erro no cadastro " + e.getMessage());
         }
-        catch(NumberFormatException e){
+        catch (NumberFormatException e){
             System.out.println("Erro: O salário deve ser um número. Cadastro cancelado.");
         }
     }
@@ -60,17 +60,18 @@ public class GerenciadorVeterinario {
             System.out.println("nenhum veterinario cadastrado");
             return;
         }
+
         for(int i = 0; i < veterinarios.size(); i++){
             Veterinario v = veterinarios.get(i);
-            System.out.println("\n[veterinario " + i + "]");
+            System.out.println("veterinario " + i+1);
 
             System.out.println("Nome: " + v.getNome() + "CPF: " + v.getCpf()); //Reflexividade
             System.out.println("CRMV: " + v.getCrmv() + "Salario: R$" + String.format("%.2f", v.getSalario()));//Reflexividade
-            System.out.println("Bônus Anual: R$ " + String.format("%.2f", v.calcularBonusAnual())); //Reflexividade
+            System.out.println("Bonus Anual: R$ " + String.format("%.2f", v.calcularBonusAnual())); //Reflexividade
         }
     }
 
-    // Método auxiliar para seleção (usado no agendamento)
+
     public void listarVeterinariosVisual() {
         if (veterinarios.isEmpty()) {
             System.out.println("Nenhum veterinário disponível.");
@@ -82,7 +83,7 @@ public class GerenciadorVeterinario {
         }
     }
 
-    // Método de acesso para outros gerenciadores
+
     public Veterinario getVeterinarioPorIndice(int index) {
         if (index >= 0 && index < veterinarios.size()) {
             return veterinarios.get(index);
@@ -93,5 +94,4 @@ public class GerenciadorVeterinario {
     public boolean temVeterinarios() {
         return !veterinarios.isEmpty();
     }
-}
 }

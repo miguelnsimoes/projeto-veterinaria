@@ -1,4 +1,3 @@
-// Implementa a nova interface IBonificavel
 public class Veterinario extends Pessoa implements IBonificavel {
     private String crmv;
     private double salario;
@@ -19,7 +18,7 @@ public class Veterinario extends Pessoa implements IBonificavel {
 
     public void setCrmv(String crmv) throws CrmvVazioException {
         if(crmv == null || crmv.trim().isEmpty()){
-            throw new CrmvVazioException("O CRMV não pode ser nulo ou vazio.");
+            throw new CrmvVazioException("O CRMV não pode ser vazio.");
         }
         this.crmv = crmv;
     }
