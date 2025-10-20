@@ -3,129 +3,143 @@ import java.util.List;
 import java.util.Scanner;
 
 public class GerenciadorCliente {
+
     private List<Cliente> clientes = new ArrayList<>();
     private Scanner scanner;
 
-    public GerenciadorCliente(Scanner scanner){
+    public GerenciadorCliente(Scanner scanner) {
         this.scanner = scanner;
     }
 
-    public void cadastrarCliente(){
-        System.out.println("CADASTRO DE CLIENTE");
+    public void cadastrarCliente() {
+        System.out.println("Cadastro de Cliente");
         Cliente cliente = new Cliente();
 
-        System.out.println("Nome do Cliente: ");
+        System.out.print("Nome do Cliente: ");
         cliente.setNome(scanner.nextLine());
 
-        System.out.println("CPF:");
-        cliente.setCpf((scanner.nextLine()));
+        System.out.print("CPF (xxx.xxx.xxx-xx): ");
+        cliente.setCpf(scanner.nextLine());
 
-        System.out.println("Endereco:");
+        System.out.print("Endereço: ");
         cliente.setEndereco(scanner.nextLine());
 
-        System.out.println("Telefone:");
-        cliente.setEndereco(scanner.nextLine());
+        System.out.print("Telefone: ");
+        cliente.setTelefone(scanner.nextLine());
 
-        System.out.println("CADASTRO DO ANIMAL");
+        System.out.println("Cadastro do Animal");
         Animal animal = cadastrarAnimal();
 
-        if(animal != null){
+        if (animal != null) {
             cliente.setAnimal(animal);
             clientes.add(cliente);
-            System.out.println("CLIENTE E ANIMAL CADASTRADOS!");
-        }
-        else{
-            System.out.println("ANIMAL NAO REGISTRADO!");
+            System.out.println("Cliente e Animal cadastrados com sucesso");
+        } else {
+            System.out.println("Cadastro de cliente cancelado pois o animal não foi registrado.");
         }
     }
 
-
-    private Animal cadastrarAnimal(){
+    private Animal cadastrarAnimal() {
         System.out.print("Nome do Animal: ");
         String nomeAnimal = scanner.nextLine();
 
-        System.out.print("Idade do Animal: ");
-        int idadeAnimal = (scanner.nextInt());
+        System.out.print("Idade do Animal (int): ");
+        int idadeAnimal = Integer.parseInt(scanner.nextLine());
 
         System.out.print("Raça do Animal: ");
         String racaAnimal = scanner.nextLine();
 
         System.out.print("Tipo (1-Cachorro / 2-Gato / 3-Pássaro): ");
-        int tipo = (scanner.nextInt());
-        scanner.nextLine();
-
+        int tipo = Integer.parseInt(scanner.nextLine());
 
         Animal animal = null;
+        if (tipo == 1) {
+            Cachorro cachorro = new Cachorro();
+            cachorro.setNome(nomeAnimal);
+            cachorro.setIdade(idadeAnimal);
+            cachorro.setRaca(racaAnimal);
 
-        if(tipo == 1){
-            Cachorro c = new Cachorro();
-            c.setNome(nomeAnimal);
-            c.setIdade(idadeAnimal);
-            c.setRaca(racaAnimal);
+            System.out.print("Porte do Cachorro: ");
+            cachorro.setPorte(scanner.nextLine());
 
-            System.out.println("Porte do Cachorro: ");
-            c.setPorte(scanner.nextLine());
+            System.out.print("Vacinado contra raiva? (true/false): ");
+            cachorro.setVacinadoRaiva(Boolean.parseBoolean(scanner.nextLine()));
 
-            animal = c;
+            animal = cachorro;
         }
-        else if(tipo == 2){
-            Gato g = new Gato();
-            g.setNome(nomeAnimal);
-            g.setIdade((idadeAnimal));
-            g.setRaca(racaAnimal);
+        else if (tipo == 2) {
+            Gato gato = new Gato();
+            gato.setNome(nomeAnimal);
+            gato.setIdade(idadeAnimal);
+            gato.setRaca(racaAnimal);
 
-            System.out.println("cor do gato: ");
-            g.setCor(scanner.nextLine());
+            System.out.print("Cor do Gato: ");
+            gato.setCor(scanner.nextLine());
 
-            animal = g;
+            System.out.print("Testado para FIV/FELV? (true/false): ");
+            gato.setTestadoFivFelv(Boolean.parseBoolean(scanner.nextLine()));
+
+            animal = gato;
         }
-        else if(tipo == 3){
-            Passaro p = new Passaro();
-            p.setNome(nomeAnimal);
-            p.setIdade(idadeAnimal);
-            p.setRaca(racaAnimal);
+        else if (tipo == 3) {
+            Passaro passaro = new Passaro();
+            passaro.setNome(nomeAnimal);
+            passaro.setIdade(idadeAnimal);
+            passaro.setRaca(racaAnimal);
 
-            System.out.println("tipo de pena: ");
-            p.setTipoPena(scanner.nextLine());
+            System.out.print("Tipo da Pena: ");
+            passaro.setTipoPena(scanner.nextLine());
 
-            animal = p;
+            System.out.print("Possui anilha? (true/false): ");
+            passaro.setAnilhado(Boolean.parseBoolean(scanner.nextLine()));
+
+            animal = passaro;
         }
         else {
-            System.out.println("erro no cadastro do animal");
+            System.out.println("Cadastro do animal falhou.");
         }
         return animal;
     }
 
-    public void listarClientes(){
-        System.out.println("DADOS DO CLIENTE");
-
-        if(clientes.isEmpty()){
-            System.out.println("nenhum cliente cadastrado");
+    public void listarClientes() {
+        System.out.println("Relatório de Clientes");
+        if (clientes.isEmpty()) {
+            System.out.println("Nenhum cliente cadastrado.");
             return;
         }
 
-        for(int i = 0; i < clientes.size(); i++){
-           Cliente c =  clientes.get(i);
-            System.out.println("Cliente " + i+1);
+        for (int i = 0; i < clientes.size(); i++) {
+            Cliente c = clientes.get(i);
+            System.out.println(i);
 
-            System.out.println("Nome: " + c.getNome() + "CPF: " + c.getCpf());
-            System.out.println("Endereco: " + c.getEndereco() + "Telefone: " + c.getEndereco());
+            //Reflexividade
+            System.out.println("Nome: " + c.getNome());
+            System.out.println("CPF: " + c.getCpf());
+            System.out.println(" Telefone: " + c.getTelefone());
+            System.out.println("Endereço: " + c.getEndereco());
 
             String animalInfo;
-            if (c.getAnimal() != null){
-                animalInfo = c.getAnimal().getNome() + " (" + c.getAnimal().getRaca() + ")"; //Reflexividade
+
+            if (c.getAnimal() != null) { //Reflexividade
+                animalInfo = c.getAnimal().getNome() + " (" + c.getAnimal().getRaca() + ")";
             }
-            else{
+            else {
                 animalInfo = "nenhum";
             }
             System.out.println("Animal: " + animalInfo);
         }
     }
 
-    public void listarClientesVisual(){
-        for(int i = 0; i < clientes.size(); i++){
+    public void listarClientesVisual() {
+
+        if (clientes.isEmpty()) {
+            System.out.println("Nenhum cliente disponível.");
+            return;
+        }
+
+        for (int i = 0; i < clientes.size(); i++) {
             Cliente c = clientes.get(i);
-            System.out.println(i + c.getNome());
+            System.out.println(i + c.getNome()); //Reflexividade
         }
     }
 
@@ -133,6 +147,7 @@ public class GerenciadorCliente {
         if (index >= 0 && index < clientes.size()) {
             return clientes.get(index);
         }
+
         return null;
     }
 

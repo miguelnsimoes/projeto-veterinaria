@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TstClinica {
+public class Principal {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -12,8 +12,6 @@ public class TstClinica {
         GerenciadorConsulta gerConsulta = new GerenciadorConsulta(scanner, gerVet, gerCliente);
 
         int opcao = -1;
-
-        System.out.println("BEM-VINDO AO SISTEMA DE GESTÃO DA CLÍNICA VETERINÁRIA");
 
         while (opcao != 0) {
             exibirMenu();
@@ -42,15 +40,14 @@ public class TstClinica {
                         gerConsulta.listarConsultas();
                         break;
                     case 0:
-                        System.out.println("Saindo do sistema...");
                         break;
                     default:
                         System.out.println("Opção inválida. Tente novamente.");
                         break;
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Erro: Por favor, digite um número válido para a opção.");
-                opcao = -1; // reseta a opcao para continuar no loop
+                System.out.println("Erro, digite o numero certo");
+                opcao = -1;
             }
         }
 

@@ -1,7 +1,7 @@
 public abstract class Animal {
-    protected String nome;
-    protected int idade;
-    protected String raca;
+    private String nome;
+    private int idade;
+    private String raca;
 
     private Cliente cliente;
 
@@ -11,7 +11,6 @@ public abstract class Animal {
         raca = "";
         cliente = null;
     }
-
 
     public String getNome(){
         return nome;
@@ -42,13 +41,12 @@ public abstract class Animal {
     }
 
     public void setCliente(Cliente cliente){
-        this.cliente = cliente;
 
-        if(cliente != null && cliente.getAnimal() !=this){
+        this.cliente = cliente;
+        if(cliente != null && cliente.getAnimal() != this){
             cliente.setAnimal(this);
         }
     }
 
     public abstract String emitirSom();
-
 }

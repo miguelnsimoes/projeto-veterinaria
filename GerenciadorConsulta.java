@@ -18,12 +18,13 @@ public class GerenciadorConsulta {
     }
 
     public void agendarConsulta() {
-        System.out.println("AGENDAMENTO DE CONSULTA");
+        System.out.println("Agendamento de Consulta");
 
         if (!gerVet.temVeterinarios()) {
             System.out.println("Não há veterinários cadastrados. Cadastre um primeiro.");
             return;
         }
+
         if (!gerCli.temClientes()) {
             System.out.println("Não há clientes cadastrados. Cadastre um primeiro.");
             return;
@@ -31,30 +32,32 @@ public class GerenciadorConsulta {
 
         System.out.println("Selecione o Veterinário:");
         gerVet.listarVeterinariosVisual();
+
         System.out.print("Digite o índice (começando de 0): ");
         int vetIndex = Integer.parseInt(scanner.nextLine());
 
         System.out.println("Selecione o Cliente:");
         gerCli.listarClientesVisual();
-        System.out.print("Digite o índice (começando de 0): ");
+
+        System.out.print("Digite o indice (começando de 0): ");
         int cliIndex = Integer.parseInt(scanner.nextLine());
 
         Veterinario vet = gerVet.getVeterinarioPorIndice(vetIndex);
         Cliente cli = gerCli.getClientePorIndice(cliIndex);
 
         if (vet == null || cli == null) {
-            System.out.println("Índice inválido.");
+            System.out.println("indice inválido.");
             return;
         }
 
-        Animal animal = cli.getAnimal();
+        Animal animal = cli.getAnimal(); //Reflexividade
 
         if (animal == null) {
-            System.out.println("Este cliente não possui um animal cadastrado.");
+            System.out.println("Este cliente nao possui um animal cadastrado.");
             return;
         }
 
-        System.out.print("Observações: ");
+        System.out.print("observações: ");
         String obs = scanner.nextLine();
 
         System.out.print("Diagnóstico: ");
@@ -66,9 +69,9 @@ public class GerenciadorConsulta {
         consulta.setAnimal(animal);
 
         if(diag == null || diag.trim().isEmpty()) {
-            consulta.setObservacoes(obs);
+            consulta.setObservacoes(obs); // metodo original
         } else {
-            consulta.setObservacoes(obs, diag);
+            consulta.setObservacoes(obs, diag); // metodo sobrecarregado
         }
 
         consultas.add(consulta);
@@ -91,5 +94,8 @@ public class GerenciadorConsulta {
             System.out.println("Observação: " + c.getObservacoes());
 
         }
+
+
     }
+
 }

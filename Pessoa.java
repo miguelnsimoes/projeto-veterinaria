@@ -1,12 +1,11 @@
-public abstract class Pessoa{
-    protected String nome;
-    protected String cpf;
+public abstract class Pessoa {
+    private String nome;
+    private String cpf;
 
     public Pessoa(){
         nome = "";
         cpf = "";
     }
-
 
     public String getNome(){
         return nome;
@@ -23,6 +22,4 @@ public abstract class Pessoa{
     public void setCpf(String cpf){
         this.cpf = cpf;
     }
-
-
 }

@@ -24,7 +24,7 @@ public class GerenciadorVeterinario {
     }
 
     public void cadastrarVeterinario(){
-        System.out.println("--- CADASTRO DE VETERINARIO---");
+        System.out.println("CADASTRO DE VETERINARIO");
         Veterinario vet = new Veterinario();
 
         System.out.println("Nome: ");
@@ -65,9 +65,12 @@ public class GerenciadorVeterinario {
             Veterinario v = veterinarios.get(i);
             System.out.println("veterinario " + i+1);
 
-            System.out.println("Nome: " + v.getNome() + "CPF: " + v.getCpf()); //Reflexividade
-            System.out.println("CRMV: " + v.getCrmv() + "Salario: R$" + String.format("%.2f", v.getSalario()));//Reflexividade
-            System.out.println("Bonus Anual: R$ " + String.format("%.2f", v.calcularBonusAnual())); //Reflexividade
+            //Reflexividade
+            System.out.println("Nome: " + v.getNome());
+            System.out.println("CPF: " + v.getCpf());
+            System.out.println("CRMV: " + v.getCrmv());
+            System.out.println("Salario: R$" + String.format("%.2f", v.getSalario()));
+            System.out.println("Bonus Anual: R$ " + String.format("%.2f", v.calcularBonusAnual()));
         }
     }
 

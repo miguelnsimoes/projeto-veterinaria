@@ -1,13 +1,14 @@
 public class Cliente extends Pessoa{
     private String endereco;
     private String telefone;
+
     private Animal animal;
 
     public Cliente(){
         super();
         endereco = "";
         telefone = "";
-        animal = null;
+        this.animal = null;
     }
 
     public String getEndereco(){
@@ -31,6 +32,7 @@ public class Cliente extends Pessoa{
     }
 
     public void setAnimal(Animal animal) {
+
         if (this.animal != null && this.animal.getCliente() == this) {
             this.animal.setCliente(null);
         }
@@ -39,6 +41,4 @@ public class Cliente extends Pessoa{
             animal.setCliente(this);
         }
     }
-
-
 }

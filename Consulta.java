@@ -3,6 +3,7 @@ import java.util.Date;
 public class Consulta {
     private Date data;
     private String observacoes;
+
     private Veterinario veterinario;
     private Animal animal;
 
@@ -34,7 +35,7 @@ public class Consulta {
         this.observacoes = observacoes;
     }
 
-    //sobrecarga
+    //Sobrecarga
     public void setObservacoes(String sintomas, String diagnostico) {
         this.observacoes = "Sintomas: " + sintomas + "\nDiagnóstico: " + diagnostico;
     }
@@ -42,7 +43,6 @@ public class Consulta {
     public void setVeterinario(Veterinario veterinario) {
         this.veterinario = veterinario;
     }
-
     public void setAnimal(Animal animal) {
         this.animal = animal;
     }
